@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>与世界赛程相遇 | 世界杯赛程故事</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, Helvetica, sans-serif;
+      background: #f3f2f0;
+      color: #2c2c2c;
+      line-height: 1.7;
+      padding: 0 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page {
+      max-width: 980px;
+      width: 100%;
+      margin: 2rem auto;
+    }
+
+    /* 柔和开场区 */
+    .hero-card {
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+      border: 1px solid #e5e3df;
+      padding: 3rem 2.5rem;
+      margin-bottom: 2.5rem;
+      transition: box-shadow 0.25s ease;
+    }
+    .hero-card:hover {
+      box-shadow: 0 12px 32px rgba(0,0,0,0.06), 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    .hero-short {
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.8rem;
+      color: #5f5b56;
+      border-left: 4px solid #c1b7ab;
+      padding-left: 1.25rem;
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      line-height: 1.3;
+      color: #1f1e1c;
+      margin-bottom: 1.2rem;
+    }
+    .hero-title em {
+      font-style: normal;
+      background: linear-gradient(120deg, #d9d2c7 0%, #d9d2c7 40%, transparent 80%);
+      padding: 0 0.3rem;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: #3e3b37;
+      max-width: 78%;
+      margin-bottom: 0.75rem;
+    }
+
+    /* 承接段落卡片 */
+    .section-card {
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.02);
+      border: 1px solid #e3dfda;
+      padding: 2.2rem 2.5rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .section-card h2 {
+      font-weight: 380;
+      font-size: 1.8rem;
+      color: #2c2824;
+      margin-bottom: 1rem;
+      letter-spacing: 0.005em;
+    }
+
+    .section-card p {
+      margin-bottom: 1.2rem;
+      color: #3b3834;
+    }
+    .section-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 特点列表 — 温和卡片网格 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin: 1.8rem 0 0.5rem;
+    }
+    .feature-item {
+      background: #faf9f7;
+      border-radius: 24px;
+      padding: 1.5rem 1.4rem;
+      border: 1px solid #e8e4df;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.01);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .feature-item:hover {
+      background: #ffffff;
+      border-color: #cdc6bc;
+    }
+    .feature-item h3 {
+      font-weight: 450;
+      font-size: 1.25rem;
+      margin-bottom: 0.7rem;
+      color: #2a2722;
+    }
+    .feature-item p {
+      font-size: 0.96rem;
+      color: #55514b;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* 温和结尾 / 链接自然嵌入 */
+    .closing-note {
+      background: #ffffff;
+      border-radius: 28px;
+      border: 1px solid #e3dfda;
+      padding: 2.2rem 2.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      margin-bottom: 2rem;
+    }
+    .closing-note p {
+      font-size: 1.1rem;
+      color: #3b3834;
+      margin-bottom: 0.8rem;
+    }
+    .closing-note .link-sentence {
+      background: #f5f3f0;
+      padding: 0.6rem 1.2rem;
+      display: inline-block;
+      border-radius: 60px;
+      margin-top: 0.5rem;
+      border: 1px solid #ded9d2;
+    }
+    .closing-note a {
+      color: #5a4f43;
+      text-decoration: none;
+      font-weight: 480;
+      border-bottom: 1px solid #b9aea1;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .closing-note a:hover {
+      color: #1f1b16;
+      border-bottom-color: #6b5f51;
+    }
+
+    /* 小字 / faq样式 */
+    .meta-note {
+      margin-top: 1.8rem;
+      font-size: 0.9rem;
+      color: #7a746d;
+      border-top: 1px solid #e5e1db;
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+    .meta-note span {
+      background: #efede9;
+      padding: 0.1rem 0.8rem;
+      border-radius: 30px;
+    }
+
+    /* 响应式调整 */
+    @media (max-width: 700px) {
+      .hero-card { padding: 2rem 1.5rem; }
+      .hero-title { font-size: 2rem; }
+      .hero-desc { max-width: 100%; }
+      .section-card { padding: 1.8rem 1.5rem; }
+      .closing-note { padding: 1.8rem 1.5rem; }
+      .feature-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      body { padding: 0 0.6rem; }
+      .page { margin: 1.2rem auto; }
+      .hero-card { padding: 1.6rem 1rem; border-radius: 28px; }
+      .hero-title { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero 开场短句 & 舒展介绍 -->
+  <div class="hero-card">
+    <div class="hero-short">那声哨响，像是从很远的地方传来。</div>
+    <h1 class="hero-title">赛程，不只是时间表<br><em>而是一段可以慢慢翻阅的旅程</em></h1>
+    <p class="hero-desc">
+      每届世界杯，都会留下许多个夜晚。有人记住绝杀，有人记住拥抱，而更多人需要的，是一份安静而可靠的赛程——知道自己会在哪一天，为什么样的瞬间屏住呼吸。
+    </p>
+  </div>
+
+  <!-- 承接段落：赛程背后的日常感 -->
+  <div class="section-card">
+    <h2>赛程与生活节奏</h2>
+    <p>
+      四年一度的大赛，往往跨越时区，也跨越不同的生活轨道。比赛日可能落在工作日的凌晨，也可能恰好是周末的黄昏。提前看清每一场的开球时间，不是为了「不错过」——而是为了从容安排，知道自己什么时候可以泡一杯茶，什么时候可以约上朋友。
+    </p>
+    <p>
+      赛程表里藏着许多信息：小组赛的循序渐进步、淘汰赛的窄路相逢、以及那些因场地或天气微调的时刻。一份保持更新的赛程，就像一位话不多但靠得住的朋友。
+    </p>
+  </div>
+
+  <!-- 特点列表：三个温和的侧面 -->
+  <div class="section-card">
+    <h2>赛程的几种温度</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>完整与清晰</h3>
+        <p>从小组赛到决赛，每一轮都按日期、时刻、对阵排列。阶段标识一目了然，无需费力对照。</p>
+      </div>
+      <div class="feature-item">
+        <h3>安静地更新</h3>
+        <p>赛程若有调整，页面会及时反映。没有弹窗干扰，没有冗余信息，只是赛程本身。</p>
+      </div>
+      <div class="feature-item">
+        <h3>适配各种屏幕</h3>
+        <p>无论在电脑前快速浏览，还是在手机上随手查询，版式都保持整洁、可读。</p>
+      </div>
+    </div>
+    <p style="margin-top: 1.8rem; color: #5c5750; font-size: 0.95rem;">
+      这些细节让赛程不再只是一张表，而更像一份安静的看球指南。
+    </p>
+  </div>
+
+  <!-- 温和结尾 + 链接自然嵌入句子中 -->
+  <div class="closing-note">
+    <p>
+      如果你正在寻找一份可以随时打开的完整赛程，不妨慢慢翻看 <span class="link-sentence"><a href="https://ssl-wcschedule.com">世界杯赛程</a></span> ——它不着急，不催促，只是把所有比赛日稳稳地放在那里。
+    </p>
+    <p>
+      有些时刻值得提前知道，然后，安心等待哨声响起。
+    </p>
+
+    <!-- 略带FAQ摘要风格 -->
+    <div class="meta-note">
+      <span>赛程阶段：小组赛 · 淘汰赛 · 决赛</span>
+      <span>时区提示：以当地时间显示</span>
+      <span>保持更新 · 无广告干扰</span>
+    </div>
+  </div>
+
+  <!-- 极简留白，无额外链接 -->
+</div>
+</body>
+</html>
