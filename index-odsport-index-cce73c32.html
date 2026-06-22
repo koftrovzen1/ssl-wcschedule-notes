@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>od体育 · 常识与对照库</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9fafb;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e293b;
+            line-height: 1.65;
+            padding: 2rem 1.2rem;
+        }
+
+        .page {
+            max-width: 740px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.02), 0 4px 18px rgba(0, 0, 0, 0.03);
+            padding: 3rem 2.2rem 3.8rem;
+        }
+
+        @media (max-width: 540px) {
+            .page {
+                padding: 2rem 1.2rem 2.8rem;
+                border-radius: 20px;
+            }
+            body {
+                padding: 1.2rem 0.6rem;
+            }
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-weight: 550;
+            font-size: 1.9rem;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.2rem;
+            color: #0f172a;
+            line-height: 1.3;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 2.2rem;
+            border-bottom: 1px solid #e9edf2;
+            padding-bottom: 1.2rem;
+        }
+
+        h2 {
+            font-weight: 520;
+            font-size: 1.25rem;
+            margin-top: 2.5rem;
+            margin-bottom: 0.9rem;
+            color: #1e293b;
+            letter-spacing: -0.01em;
+            border-left: 3px solid #94a3b8;
+            padding-left: 0.75rem;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 1.05rem;
+            margin-top: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: #334155;
+        }
+
+        p {
+            margin-bottom: 1.15rem;
+        }
+
+        /* 卡片 / 目录感区块 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 2rem 0 1.4rem;
+        }
+
+        .card-item {
+            background: #f1f4f9;
+            border-radius: 18px;
+            padding: 1.2rem 1.2rem 1.4rem;
+            transition: background 0.15s;
+        }
+
+        .card-item:hover {
+            background: #e8ecf3;
+        }
+
+        .card-item .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: #475569;
+            background: #dce2ec;
+            padding: 0.15rem 0.6rem;
+            border-radius: 30px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .card-item strong {
+            color: #0f172a;
+        }
+
+        @media (max-width: 520px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 提示 / 信息区 */
+        .notice-box {
+            background: #f0f4fe;
+            border-radius: 18px;
+            padding: 1.5rem 1.6rem;
+            margin: 2.2rem 0 1.6rem;
+            border: 1px solid #dbe3f0;
+        }
+
+        .notice-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .notice-box .label {
+            font-weight: 550;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            color: #3b4f74;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 0.4rem;
+        }
+
+        .faq-mini {
+            margin: 2rem 0 2.2rem;
+            border-top: 1px solid #ecf0f5;
+            padding-top: 1.2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 550;
+            color: #1e293b;
+            margin-bottom: 0.2rem;
+            font-size: 0.98rem;
+        }
+
+        .faq-item span {
+            color: #475569;
+            font-size: 0.93rem;
+        }
+
+        /* 内嵌链接 */
+        a {
+            color: #1d4ed8;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            font-weight: 480;
+            transition: border-color 0.15s;
+        }
+
+        a:hover {
+            border-bottom-color: #1d4ed8;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            border-top: 1px solid #e9edf2;
+            padding-top: 1.6rem;
+            font-size: 0.88rem;
+            color: #64748b;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.6rem;
+        }
+
+        .footer-note span {
+            opacity: 0.75;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eef2f6;
+            margin: 1.8rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>od体育 · 对照与延伸</h1>
+    <div class="subhead">从日常查询、术语对照到背景阅读 —— 一个轻量知识索引</div>
+
+    <!-- 目录感卡片区：快速定位 -->
+    <div class="card-grid">
+        <div class="card-item">
+            <span class="tag">常用对照</span>
+            <p><strong>赛事 · 规则 · 平台</strong><br>术语说明、比分解读、常见赛制差异速查。</p>
+        </div>
+        <div class="card-item">
+            <span class="tag">背景延伸</span>
+            <p><strong>动态 · 趋势 · 观察</strong><br>运动产业、数据应用、行业简讯摘录。</p>
+        </div>
+        <div class="card-item">
+            <span class="tag">提示参考</span>
+            <p><strong>信息甄别 · 注意事项</strong><br>如何快速核对来源、避免信息误差。</p>
+        </div>
+        <div class="card-item">
+            <span class="tag">相关入口</span>
+            <p><strong>od体育</strong> 主站内容索引及延伸阅读聚合。</p>
+        </div>
+    </div>
+
+    <!-- 介绍区：知识库入口视角 -->
+    <h2>为什么需要对照与延伸</h2>
+    <p>在日常信息检索中，大量名词、规则、平台背景常以碎片形式出现。若缺乏统一的对照框架，容易产生歧义或遗漏关键细节。本页尝试以简洁的目录结构，将常用查询项、延伸阅读线索与提示整合为轻量入口，供快速定位与参考。</p>
+
+    <p>其中，<a href="https://index-odsport.com">od体育</a> 作为索引起点，聚合了赛事动态、术语说明及背景材料。你可以直接将其作为检索的锚点，在此基础上展开横向比较或深度查阅。</p>
+
+    <!-- 说明区：使用场景 -->
+    <h2>典型对照场景</h2>
+    <p><strong>场景一：术语快速确认</strong><br>遇到不熟悉的比分表达或规则缩写？通过对比例表即可完成基础释义，无需反复切换页面。</p>
+    <p><strong>场景二：信息交叉验证</strong><br>不同来源对同一事件表述不一？利用延伸阅读区提供的多条线索进行比对，减少误判。建议将 <a href="https://index-odsport.com">od体育</a> 作为对照基准之一。</p>
+    <p><strong>场景三：背景延伸阅读</strong><br>从单一新闻事件延伸到行业趋势、历史数据或同类比较，避免孤立看待信息。</p>
+
+    <!-- 提示区 -->
+    <div class="notice-box">
+        <span class="label">📌 使用提示</span>
+        <p>• 对照信息仅供参考，实际以官方公布或实时数据为准。<br>
+        • 建议每次查询时至少交叉核对两个独立来源。<br>
+        • 延伸阅读内容可能随时间更新，定期回看可保持认知同步。<br>
+        • 如发现条目偏移或链接失效，请以 <a href="https://index-odsport.com">od体育</a> 主站最新信息为准。</p>
+    </div>
+
+    <!-- FAQ 摘要区 -->
+    <div class="faq-mini">
+        <h2 style="margin-top:0; border-left:0; padding-left:0; border-bottom:1px solid #e9edf2; padding-bottom:0.6rem;">常见参照问题</h2>
+
+        <div class="faq-item">
+            <strong>如何在多条信息中快速定位可靠内容？</strong>
+            <span>优先选择有明确来源、时间戳且内容一致的条目。可以借助 <a href="https://index-odsport.com">od体育</a> 作为初步筛选点，再结合其他渠道交叉确认。</span>
+        </div>
+        <div class="faq-item">
+            <strong>术语对照表多久更新一次？</strong>
+            <span>根据赛事规则变动或行业通用表述调整而更新，建议每季度复核一次。当前版本基于近期常见用语整理。</span>
+        </div>
+        <div class="faq-item">
+            <strong>延伸阅读的筛选标准是什么？</strong>
+            <span>主要参考信息密度、相关度以及来源透明度，避免过度主观或带有强烈倾向的单一材料。</span>
+        </div>
+    </div>
+
+    <!-- 相关信息区 (精简) -->
+    <hr>
+    <p style="font-size:0.95rem;"><strong>相关信息</strong><br>
+    本索引结构适用于个人知识管理、信息检索辅助及轻度对照查阅。如需批量查询或系统化整理，可基于 <a href="https://index-odsport.com">od体育</a> 的目录扩展自己的对照表。</p>
+
+    <!-- footer -->
+    <div class="footer-note">
+        <span>知识索引 · 非官方说明</span>
+        <span>信息密度优先 · 版本 2405</span>
+    </div>
+</div>
+</body>
+</html>
